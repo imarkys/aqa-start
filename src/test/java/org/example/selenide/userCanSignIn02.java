@@ -13,7 +13,7 @@ public class userCanSignIn02 {
         open("http://automationpractice.com/index.php");
         $(By.className("login")).click();
 
-        new registrationPage().fillFirstRegistrationPage("qqqq01234522@qqq.com");
+        new registrationPage().fillFirstRegistrationPage("qqqq789010@mailinator.com");
         new registrationPage().fillSecondRegistrationPage("James", "Holden", "12345", "Ceres", "Missoula", "59801", "(555) 555-1234");
 
         $(By.className("page-heading")).shouldHave(text("MY ACCOUNT"));

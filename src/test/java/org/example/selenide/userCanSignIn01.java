@@ -14,13 +14,13 @@ public class userCanSignIn01 {
         open("http://automationpractice.com/index.php");
         $(By.className("login")).click();
 
-        $(By.name("email_create")).setValue("qqqq789010@qqq.com");
+        $(By.name("email_create")).setValue("qqqq789010@mailinator.com");
         $(By.name("SubmitCreate")).click();
 
         $(By.name("id_gender")).click();
         $(By.name("customer_firstname")).setValue("James");
         $(By.name("customer_lastname")).setValue("Holden");
-        $(By.name("email")).shouldHave(value("qqqq789010@qqq.com"));
+        $(By.name("email")).shouldHave(value("qqqq789010@mailinator.com"));
         $(By.name("passwd")).setValue("12345");
 
         $(By.name("firstname")).shouldHave(value("James"));
