@@ -13,9 +13,10 @@ public class userCanSignIn02 {
         open("http://automationpractice.com/index.php");
         $(By.className("login")).click();
 
-        new registrationPage().fillFirstRegistrationPage("qqqq789010@mailinator.com");
-        new registrationPage().fillSecondRegistrationPage("James", "Holden", "12345", "Ceres", "Missoula", "59801", "(555) 555-1234");
+        new registrationPage().fillFirstRegistrationPage("qqq23456@mailinator.com");
+        new registrationPage().fillSecondRegistrationPage();
 
         $(By.className("page-heading")).shouldHave(text("MY ACCOUNT"));
+        $(By.className("account")).shouldHave(text("James Holden"));
     }
 }

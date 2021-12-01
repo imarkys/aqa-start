@@ -3,6 +3,7 @@ package org.example.selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class registrationPage {
@@ -23,16 +24,16 @@ public class registrationPage {
             emailCreate.val(email).pressEnter();
         }
 
-        public void fillSecondRegistrationPage(String fName, String lName, String pass, String address, String town, String code, String number) {
-            genderRB.click();
-            firstName.val(fName);
-            lastName.val(lName);
-            password.val(pass);
-            address1.val(address);
-            city.val(town);
+        public void fillSecondRegistrationPage() {
+            genderRB.waitUntil(visible, 60000).click();
+            firstName.val("James");
+            lastName.val("Holden");
+            password.val("12345");
+            address1.val("Ceres");
+            city.val("Missoula");
             state.selectOption("Montana");
-            postcode.val(code);
-            mobileNumber.val(number).pressEnter();
+            postcode.val("59801");
+            mobileNumber.val("(555) 555-1234").pressEnter();
         }
 
 }
